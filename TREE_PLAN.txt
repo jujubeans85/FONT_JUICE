@@ -1,6 +1,0 @@
-index.html
-app-v2.js
-style-v2.css
-datasets/active-dataset.json
-datasets/adam-hand-v1/source.html
-sw.js
