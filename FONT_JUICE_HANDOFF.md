@@ -4,19 +4,28 @@
 
 Font Juice composes PNG lettering from Adam's real captured handwriting. It should preserve uneven widths, angles, baselines, spacing and multiple genuine variants. It is a raster composer, not yet an OpenType font or a trained handwriting model.
 
-## Current repair
+## What the screenshots proved
 
-The stored glyph PNGs are opaque grayscale images. The original renderer used their full alpha channel, so the complete rectangular image area was coloured instead of only the pen stroke.
+Safari showed real letters because `sw.js` was hot-patching the old `index.html` at runtime.
 
-Build V07 fixes that at load time:
+A newly added Home Screen copy still showed rectangles because the repository's actual `index.html` had never been changed. The repo timestamp confirmed that. Treating the worker patch as a finished root repair was wrong.
 
-- transparent PNGs keep their original alpha
+## Current working build
+
+Use `working.html`.
+
+It is a direct page, not a service-worker illusion:
+
+- `working.html` provides the interface
+- `working.js` fetches the embedded provisional glyph data from `index.html`
+- `working.js` performs the mask conversion itself
+- transparent PNGs keep their alpha
 - opaque dark-background captures convert luminance to alpha
 - opaque light-background captures convert inverse luminance to alpha
-- empty masks fail clearly
-- near-solid rectangular masks fail clearly
+- empty and near-solid masks fail clearly
+- after successful rendering, legacy Font Juice workers and caches are removed
 
-The patch is applied by `sw.js` to the existing self-contained `index.html`. The worker removes old Font Juice caches, activates immediately and reloads open pages with `?mask=7`.
+The footer must show `Build 2026-06-21-direct-1` before this build is added to the Home Screen.
 
 ## Later handwriting replacement
 
@@ -26,7 +35,7 @@ The current captures are provisional. New batches should be preserved separately
 - `adam-hand-v2`
 - `adam-hand-v3`
 
-Do not overwrite earlier batches. A later clean architecture should separate:
+Do not overwrite earlier batches. The later clean architecture should separate:
 
 - renderer and controls
 - active dataset manifest
@@ -53,14 +62,22 @@ Switching to a later valid dataset should not require rewriting the composer.
 - standard replacement fonts
 - regenerated fake handwriting
 - frameworks or backends
-- service-worker feature work until rendering is stable
-- duplicate final/fixed/version files
+- further service-worker feature work
 - silently drawing rectangles when a glyph fails
+- calling the root repair complete before `index.html` is genuinely replaced
 
 ## Acceptance test
 
-Real handwriting must render in Safari and the Home Screen version; A-Z, 0-9 and punctuation must work; seeds must repeat; all three modes must differ; PNG export must work; and failures must be visible rather than hidden.
+Real handwriting must render from `working.html` in Safari and after adding that exact page to the Home Screen. A-Z, 0-9 and punctuation must work; seeds must repeat; all three modes must differ; PNG export must work; and failures must be visible rather than hidden.
 
 ## Later Codex review
 
-Review the repository after V07 is visually confirmed. Verify the mask polarity detection, transparent-alpha handling, solid-box guard, PNG export and Home Screen update path. Then separate the provisional glyph data from renderer code without changing the product or regenerating the handwriting.
+After the direct build is visually confirmed, make it the single root application:
+
+1. move the provisional glyph data into a versioned replaceable dataset
+2. make the direct renderer the real `index.html`
+3. remove the temporary fetch-back to the old `index.html`
+4. remove `sw.js`
+5. test Safari and a fresh Home Screen install
+
+Do not change the handwriting, add a framework, add a backend or reintroduce offline support during that cleanup.
