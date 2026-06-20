@@ -1,1 +1,0 @@
-Upload the CONTENTS of this folder to the root of jujubeans85/FONT_JUICE. Keep the folders intact. The lowercase index.html is required.
