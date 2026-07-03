@@ -1,0 +1,2 @@
+Standalone app path is /FONT_JUICE/mimi21/?fish=love-fish
+Use fish ids from mimi21/data.js.
