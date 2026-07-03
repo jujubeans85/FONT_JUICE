@@ -1,89 +1,18 @@
-const VERSION='font-juice-route-v8';
-const ROUTER_TAG='<script src="./mimi-21-router.js?v=20260704-route-1"></script>';
-const OLD="function loadImage(src){return new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(new Error('A handwriting glyph could not load'));image.src=src})}";
-const FIX=`function loadImage(src){
-  return new Promise((resolve,reject)=>{
-    const image=new Image();
-    image.onload=()=>{
-      try{
-        const mask=document.createElement('canvas');
-        mask.width=image.naturalWidth||image.width;
-        mask.height=image.naturalHeight||image.height;
-        const ctx=mask.getContext('2d',{willReadFrequently:true});
-        if(!ctx)throw new Error('2D canvas unavailable');
-        ctx.drawImage(image,0,0);
-        const pixels=ctx.getImageData(0,0,mask.width,mask.height);
-        const data=pixels.data;
-        const count=mask.width*mask.height;
-        const luma=i=>.2126*data[i]+.7152*data[i+1]+.0722*data[i+2];
-        let transparent=0,borderLuma=0,borderCount=0;
-        for(let y=0;y<mask.height;y++){
-          for(let x=0;x<mask.width;x++){
-            const i=(y*mask.width+x)*4;
-            if(data[i+3]<250)transparent++;
-            if(x===0||y===0||x===mask.width-1||y===mask.height-1){borderLuma+=luma(i);borderCount++}
-          }
-        }
-        const hasAlpha=transparent/count>.005;
-        const darkBackground=(borderCount?borderLuma/borderCount:0)<128;
-        let occupied=0,borderOccupied=0;
-        for(let y=0;y<mask.height;y++){
-          for(let x=0;x<mask.width;x++){
-            const i=(y*mask.width+x)*4;
-            const alpha=hasAlpha?data[i+3]:Math.round(darkBackground?luma(i):255-luma(i));
-            data[i]=255;data[i+1]=255;data[i+2]=255;data[i+3]=alpha;
-            if(alpha>12){occupied++;if(x===0||y===0||x===mask.width-1||y===mask.height-1)borderOccupied++}
-          }
-        }
-        const coverage=occupied/count;
-        const borderCoverage=borderCount?borderOccupied/borderCount:0;
-        if(coverage<.001)throw new Error('A handwriting glyph mask is empty');
-        if(coverage>.96&&borderCoverage>.9)throw new Error('A handwriting glyph became a solid rectangle');
-        ctx.clearRect(0,0,mask.width,mask.height);
-        ctx.putImageData(pixels,0,0);
-        resolve(mask);
-      }catch(error){reject(error)}
-    };
-    image.onerror=()=>reject(new Error('A handwriting glyph could not load'));
-    image.src=src;
-  });
-}`;
-function shouldInjectRouter(url){
-  return url.pathname.endsWith('/FONT_JUICE/')||url.pathname.endsWith('/FONT_JUICE/index.html')||url.pathname.endsWith('/FONT_JUICE/working.html');
-}
-function injectRouter(html){
-  if(html.includes('mimi-21-router.js'))return html;
-  if(html.includes('</body>'))return html.replace('</body>',ROUTER_TAG+'</body>');
-  return html+ROUTER_TAG;
-}
+const VERSION='font-juice-route-v9';
 self.addEventListener('install',event=>event.waitUntil(self.skipWaiting()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
   const keys=await caches.keys();
   await Promise.all(keys.filter(key=>key.startsWith('font-juice-')).map(key=>caches.delete(key)));
   await self.clients.claim();
-  const windows=await self.clients.matchAll({type:'window'});
-  for(const client of windows){
-    const url=new URL(client.url);
-    if(url.pathname.endsWith('/FONT_JUICE/')||url.pathname.endsWith('/FONT_JUICE/index.html')){
-      url.searchParams.set('mask','8');
-      try{await client.navigate(url.href)}catch(_error){}
-    }
-  }
 })()));
 self.addEventListener('fetch',event=>{
   if(event.request.mode!=='navigate')return;
   const url=new URL(event.request.url);
   if(!url.pathname.includes('/FONT_JUICE/'))return;
-  event.respondWith((async()=>{
-    const response=await fetch(event.request,{cache:'no-store'});
-    let html=await response.text();
-    if(html.includes(OLD))html=html.replace(OLD,FIX);
-    html=html.replace('FONT_JUICE · V05','FONT_JUICE · V08').replace('FONT_JUICE · V07','FONT_JUICE · V08');
-    if(shouldInjectRouter(url))html=injectRouter(html);
-    const headers=new Headers(response.headers);
-    headers.set('content-type','text/html; charset=utf-8');
-    headers.set('cache-control','no-store, max-age=0');
-    headers.set('x-font-juice-fix',VERSION);
-    return new Response(html,{status:response.status,statusText:response.statusText,headers});
-  })());
+  if(url.pathname.endsWith('/FONT_JUICE/')||url.pathname.endsWith('/FONT_JUICE/index.html')){
+    const target=new URL('./working.html',url);
+    target.search=url.search;
+    target.hash=url.hash;
+    event.respondWith(Response.redirect(target.href,302));
+  }
 });
