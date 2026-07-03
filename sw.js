@@ -1,4 +1,5 @@
-const VERSION='font-juice-mask-v7';
+const VERSION='font-juice-route-v8';
+const ROUTER_TAG='<script src="./mimi-21-router.js?v=20260704-route-1"></script>';
 const OLD="function loadImage(src){return new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(new Error('A handwriting glyph could not load'));image.src=src})}";
 const FIX=`function loadImage(src){
   return new Promise((resolve,reject)=>{
@@ -47,6 +48,11 @@ const FIX=`function loadImage(src){
     image.src=src;
   });
 }`;
+function injectRouter(html){
+  if(html.includes('mimi-21-router.js'))return html;
+  if(html.includes('</body>'))return html.replace('</body>',ROUTER_TAG+'</body>');
+  return html+ROUTER_TAG;
+}
 self.addEventListener('install',event=>event.waitUntil(self.skipWaiting()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
   const keys=await caches.keys();
@@ -56,7 +62,7 @@ self.addEventListener('activate',event=>event.waitUntil((async()=>{
   for(const client of windows){
     const url=new URL(client.url);
     if(url.pathname.endsWith('/FONT_JUICE/')||url.pathname.endsWith('/FONT_JUICE/index.html')){
-      url.searchParams.set('mask','7');
+      url.searchParams.set('mask','8');
       try{await client.navigate(url.href)}catch(_error){}
     }
   }
@@ -69,7 +75,8 @@ self.addEventListener('fetch',event=>{
     const response=await fetch(event.request,{cache:'no-store'});
     let html=await response.text();
     if(html.includes(OLD))html=html.replace(OLD,FIX);
-    html=html.replace('FONT_JUICE · V05','FONT_JUICE · V07');
+    html=html.replace('FONT_JUICE · V05','FONT_JUICE · V08').replace('FONT_JUICE · V07','FONT_JUICE · V08');
+    html=injectRouter(html);
     const headers=new Headers(response.headers);
     headers.set('content-type','text/html; charset=utf-8');
     headers.set('cache-control','no-store, max-age=0');
