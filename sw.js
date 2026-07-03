@@ -48,6 +48,9 @@ const FIX=`function loadImage(src){
     image.src=src;
   });
 }`;
+function shouldInjectRouter(url){
+  return url.pathname.endsWith('/FONT_JUICE/')||url.pathname.endsWith('/FONT_JUICE/index.html')||url.pathname.endsWith('/FONT_JUICE/working.html');
+}
 function injectRouter(html){
   if(html.includes('mimi-21-router.js'))return html;
   if(html.includes('</body>'))return html.replace('</body>',ROUTER_TAG+'</body>');
@@ -76,7 +79,7 @@ self.addEventListener('fetch',event=>{
     let html=await response.text();
     if(html.includes(OLD))html=html.replace(OLD,FIX);
     html=html.replace('FONT_JUICE · V05','FONT_JUICE · V08').replace('FONT_JUICE · V07','FONT_JUICE · V08');
-    html=injectRouter(html);
+    if(shouldInjectRouter(url))html=injectRouter(html);
     const headers=new Headers(response.headers);
     headers.set('content-type','text/html; charset=utf-8');
     headers.set('cache-control','no-store, max-age=0');
