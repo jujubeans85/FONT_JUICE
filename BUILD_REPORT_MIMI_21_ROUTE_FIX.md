@@ -47,4 +47,4 @@ https://jujubeans85.github.io/FONT_JUICE/birthday-countdown/
 
 If iOS Safari still shows the old root once, close the tab and reopen the tag once GitHub Pages has deployed the latest commit. The root file itself is now a router, so this should no longer depend on service-worker timing.
 
-Final commit chain built via Git tree plumbing and pushed to main.
+Final commit chain built via Git tree plumbing and ready on commit c4f8f3ddef26301f04a30837b9c21b7b6a879fa5.
