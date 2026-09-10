@@ -12,8 +12,8 @@ function element(value=''){
   addEventListener(type,fn){this.listeners[type]=fn},removeAttribute(name){delete this[name]},
   scrollIntoView(){},focus(){},showModal(){},remove(){},click(){this.listeners.click?.()}};
 }
-const defaults={text:'MADE WITH LOVE.\nA LITTLE WONKY. ALL ME.',mode:'neat',size:'100',width:'1600',seed:'21',color:'#000000',bg:'#ffffff'};
-const elements=Object.fromEntries(['text','mode','size','sizeValue','width','seed','color','bg','status','readyDot','dimensions','exportPanel','exportPreview','buildInfo','renderBtn','shuffleBtn','saveBtn','showBtn','clearBtn','installHelpBtn','installDialog'].map(k=>[k,element(defaults[k]||'')]));
+const defaults={dataset:'original',text:'MADE WITH LOVE.\nA LITTLE WONKY. ALL ME.',mode:'neat',size:'100',width:'1600',seed:'21',color:'#000000',bg:'#ffffff'};
+const elements=Object.fromEntries(['dataset','textHelp','text','mode','size','sizeValue','width','seed','color','bg','status','readyDot','dimensions','exportPanel','exportPreview','buildInfo','renderBtn','shuffleBtn','saveBtn','showBtn','clearBtn','installHelpBtn','installDialog'].map(k=>[k,element(defaults[k]||'')]));
 elements.canvas=createCanvas(300,150);
 const storage=new Map();
 const errors=[];
@@ -25,6 +25,8 @@ const sandbox={console:{log:console.log,warn(){},error(e){errors.push(e.message)
 vm.createContext(sandbox);
 const datasetName=fs.readdirSync(path.join(root,'data')).find(n=>/^adam-hand-v1\..*\.js$/.test(n));
 vm.runInContext(fs.readFileSync(path.join(root,'data',datasetName),'utf8'),sandbox);
+const captureName=fs.readdirSync(path.join(root,'data')).find(n=>/^adam-hand-capture03\..*\.js$/.test(n));
+vm.runInContext(fs.readFileSync(path.join(root,'data',captureName),'utf8'),sandbox);
 const source=fs.readFileSync(path.join(root,'working.js'),'utf8').replace('start();\n})();','globalThis.testApi={prepareGlyphMask,getGlyphs,render,loadDataset,normaliseText,scheduleRender,currentPng,layoutItems};\n})();');
 vm.runInContext(source,sandbox);
 const api=sandbox.testApi;
@@ -88,6 +90,25 @@ async function run(){
  assert(fs.existsSync(path.join(root,'.nojekyll')),'plain static publishing must bypass Liquid');
  assert(!html.includes('mimi-21-router.js'),'birthday debug overlay must not run in composer');
  assert(!source.includes("fetch("),'dataset is independent of legacy HTML');
+ // Switch datasets and verify original captures were not mixed with the new ones.
+ elements.dataset.value='capture-03';elements.text.value='DEAR ME,\nJUST ENJOY YOUR TIME!';
+ elements.mode.value='untucked';elements.color.value='#fd9613';elements.bg.value='#ffffff';elements.seed.value='21';
+ await api.render();assert.match(elements.buildInfo.textContent,/Orange chisel/);
+ let freshCount=0;
+ for(const ch of Object.keys(sandbox.FONT_JUICE_CAPTURE03.glyphs)){
+  const masks=await api.getGlyphs(ch);assert.equal(masks.length,(ch==='9'||ch==='\\')?3:4);
+  for(const mask of masks){assert(coverage(mask)>.001&&coverage(mask)<.96);freshCount++}
+ }
+ assert.equal(freshCount,266);
+ const newRender=composition();await api.render();assert(newRender.equals(composition()),'new set repeatable');
+ assert(colourCount([253,150,19])>1000,'orange ink visible');
+ if(pngDir)fs.writeFileSync(path.join(pngDir,'FONT_JUICE_Untucked_Preview.png'),newRender);
+ elements.text.value='A.';await api.render();const fullstop=await api.getGlyphs('.'),letterA=await api.getGlyphs('A');
+ assert(fullstop.every(m=>m.height<letterA[0].height*.4),'punctuation keeps its smaller captured size');
+ const caption=JSON.parse(storage.get('font-juice-state-v2'));assert.equal(caption.dataset,'capture-03');
+ elements.dataset.value='original';await api.render();assert.match(elements.buildInfo.textContent,/Original captures/);
+ assert.equal((await api.getGlyphs('9')).length,4,'old captures still intact after switching');
+ console.log('PASS: new capture 266 real masks, measured punctuation, dataset switching, orange ink, PNG output; original 268 masks.');
  console.log('PASS: 268 real masks; opaque/transparent mask inputs; deterministic render; 3 modes; seed shuffle; colours; multiline; PNG encode/decode; stale-export protection; size limit; composer/NFC routing; local assets.');
  console.log('Expected rejected render:',errors);
 }

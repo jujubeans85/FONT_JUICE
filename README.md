@@ -6,7 +6,19 @@ A mobile-first handwriting composer made from Adam's real captured glyphs. Type 
 
 The canonical app is the repository root (`index.html`), including existing `?mask=7` links. `working.html` redirects to it while preserving the query and hash. Explicit birthday/NFC queries (`fish`, `id`, `slot`, `tag`, `nfc`) still open `mimi21/`. Other existing sub-apps are unchanged.
 
-The footer identifies `Build 2026-09-10-composer-1`. New users start in Neat mode; existing saved settings and text are retained.
+The footer identifies `Build 2026-09-10-capture-03`. New users start with the orange chisel capture and Slightly untucked preset. Existing text and settings are retained; the Handwriting selector can switch between capture sets.
+
+## Orange chisel capture (10 September 2026)
+
+The completed Capture 03 sheets supply 266 real glyphs across 67 characters. The fourth `9` and fourth backslash cells were empty; those characters use their three real samples. No synthetic replacements or duplicated samples are counted as additional variants.
+
+- `data/adam-hand-capture03.b28f4d48280e.js`: transparent glyph masks and per-sample baseline metrics.
+- `data/capture-03-extraction.json`: source hashes, cell mapping, pixel crops, and explicit blank-cell record.
+- `scripts/extract-capture-03.py`: deterministic orange-channel extraction from the supplied screenshots (Pillow, NumPy and SciPy).
+
+The source pages and handwritten signatures remain in the user's original private uploads. The published bundle contains only the 266 character crops. The natural-writing page informs the intended style but is not published or converted into inferred glyphs.
+
+The new capture uses measured letter heights and punctuation baselines rather than making every crop the same height. Its native stroke weight is retained in all modes. The original set remains unchanged and selectable. Screenshot resolution limits enlargement quality; a marked-up original PDF would be a better future source for larger print work.
 
 ## Single source of truth
 
@@ -32,7 +44,7 @@ Open the root URL in Safari. Type into **Type your text**. Use **Save / Share PN
 
 ## Verification
 
-The regression suite runs the actual JavaScript renderer with a native canvas (no browser needed). It covers all 268 real variants, transparent black/white ink, opaque light/dark scans, deterministic seeds, three styles, colours, multiline and word wrapping, PNG encoding/decoding, stale-export prevention, oversized input, asset references and composer/NFC routing.
+The regression suite checks both the 268 original masks and 266 new masks, dataset switching, retained blank cells, and measured punctuation. It runs the actual JavaScript renderer with a native canvas (no browser needed). It covers all 268 real variants, transparent black/white ink, opaque light/dark scans, deterministic seeds, three styles, colours, multiline and word wrapping, PNG encoding/decoding, stale-export prevention, oversized input, asset references and composer/NFC routing.
 
 With `@napi-rs/canvas` installed in the test environment:
 

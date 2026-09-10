@@ -1,15 +1,16 @@
 (()=>{
 'use strict';
-const BUILD_ID='2026-09-10-composer-1';
-let DATA={};
+const BUILD_ID='2026-09-10-capture-03';
+let DATA={},METADATA=null;
 const MODES={
+  untucked:{rot:.8,base:.012,scale:.02,track:.07,space:.50,thick:0,line:1.42},
   neat:{rot:1.1,base:.025,scale:.025,track:.045,space:.45,thick:0,line:1.32},
   chisel:{rot:1.8,base:.04,scale:.035,track:-.015,space:.40,thick:3,line:1.27},
   loose:{rot:4.2,base:.085,scale:.065,track:-.095,space:.34,thick:2,line:1.18}
 };
 const $=id=>document.getElementById(id);
 const els={
-  text:$('text'),mode:$('mode'),size:$('size'),sizeValue:$('sizeValue'),width:$('width'),seed:$('seed'),
+  dataset:$('dataset'),text:$('text'),mode:$('mode'),size:$('size'),sizeValue:$('sizeValue'),width:$('width'),seed:$('seed'),
   color:$('color'),bg:$('bg'),canvas:$('canvas'),status:$('status'),readyDot:$('readyDot'),
   dimensions:$('dimensions'),exportPanel:$('exportPanel'),exportPreview:$('exportPreview')
 };
@@ -62,13 +63,20 @@ async function removeLegacyWorkers(){
     }
   }catch(error){console.warn(error)}
 }
-async function loadDataset(){
-  DATA=globalThis.FONT_JUICE_GLYPHS;
-  if(!DATA||typeof DATA!=='object')throw new Error('Handwriting data did not load. Reload while connected.');
+function loadDataset(){
+  const selected=els.dataset.value==='original'
+    ?{id:'original',name:'Original captures',glyphs:globalThis.FONT_JUICE_GLYPHS}
+    :globalThis.FONT_JUICE_CAPTURE03;
+  if(!selected?.glyphs)throw new Error('Handwriting data did not load. Reload while connected.');
   for(const ch of 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'){
-    if(!Array.isArray(DATA[ch])||!DATA[ch].length)throw new Error(`Handwriting data is missing ${ch}`);
+    if(!Array.isArray(selected.glyphs[ch])||!selected.glyphs[ch].length)throw new Error(`Handwriting data is missing ${ch}`);
   }
-  $('buildInfo').textContent=`Build ${BUILD_ID} · Adam Hand v1`;
+  if(METADATA?.id!==selected.id)imagePromises.clear();
+  METADATA=selected;DATA=selected.glyphs;
+  $('buildInfo').textContent=`Build ${BUILD_ID} · ${selected.name}`;
+  $('textHelp').textContent=selected.id==='original'
+    ?'Renders as you type. Original captures, in CAPITALS.'
+    :'Renders as you type. Your new chisel lettering, in CAPITALS.';
 }
 function prepareGlyphMask(image){
   const mask=document.createElement('canvas');
@@ -126,23 +134,24 @@ function getGlyphs(character){
   return imagePromises.get(character);
 }
 function hasRoute(){const params=new URLSearchParams(location.search);return params.has('fish')||params.has('id')||params.has('slot')||params.has('tag')||params.has('nfc')}
-function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({text:els.text.value,mode:els.mode.value,size:els.size.value,width:els.width.value,seed:els.seed.value,color:els.color.value,bg:els.bg.value}))}catch{}}
+function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({dataset:els.dataset.value,text:els.text.value,mode:els.mode.value,size:els.size.value,width:els.width.value,seed:els.seed.value,color:els.color.value,bg:els.bg.value}))}catch{}}
 function restoreState(){
   try{
     if(hasRoute())throw new Error('route-owned state');
     const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
-    if(state)for(const key of ['text','mode','size','width','seed','color','bg'])if(state[key]!==undefined&&els[key])els[key].value=state[key];
+    if(state)for(const key of ['dataset','text','mode','size','width','seed','color','bg'])if(state[key]!==undefined&&els[key])els[key].value=state[key];
   }catch{}
   els.sizeValue.value=els.size.value;
 }
 async function render(){
   const serial=++renderSerial;
   invalidateExport();
+  try{
+  loadDataset();
   const value=normaliseText(els.text.value);
   const missing=[...new Set(textUnits(value).filter(ch=>!DATA[ch]&&!/\s/.test(ch)))];
   const needed=[...new Set(textUnits(value).filter(ch=>DATA[ch]))];
   setStatus(needed.length?'Loading the letters used here…':'Type something to render.');
-  try{
     const pairs=await Promise.all(needed.map(async ch=>[ch,await getGlyphs(ch)]));
     if(serial!==renderSerial)return;
     const images=Object.fromEntries(pairs);
@@ -153,7 +162,8 @@ async function render(){
     const seed=Number(els.seed.value)||1;
     const random=rng(seed);
     const margin=Math.max(24,Math.round(size*.44));
-    const lineHeight=size*mode.line;
+    let lineHeight=size*mode.line;
+    const thick=METADATA.nativeStroke?0:mode.thick;
     const items=[];
     const available=width-margin*2;
     let x=margin;
@@ -172,13 +182,19 @@ async function render(){
       previousVariant[ch]=variant;
       const image=variants[variant];
       const [heightFactor,baselineOffset]=PUNCTUATION[ch]||[1,0];
-      const scale=Math.min((size*heightFactor/image.height)*(1+(random()*2-1)*mode.scale),Math.max(1,available-12)/image.width);
+      const metric=METADATA.metrics?.[ch]?.[variant];
+      const scale=Math.min((metric?size/METADATA.emHeight:size*heightFactor/image.height)*(1+(random()*2-1)*mode.scale),Math.max(1,available-12)/image.width);
+      const capturedOffset=metric?(image.height-metric.baseline)*scale:baselineOffset*size;
       const itemWidth=image.width*scale,itemHeight=image.height*scale;
       const advance=Math.max(size*.12,itemWidth+size*mode.track);
-      items.push({image,itemWidth,itemHeight,advance,rotation:(random()*2-1)*mode.rot,baseline:baselineOffset*size+(random()*2-1)*mode.base*size});
+      items.push({image,itemWidth,itemHeight,advance,rotation:(random()*2-1)*mode.rot,baseline:capturedOffset+(random()*2-1)*mode.base*size});
     }
     const lines=layoutItems(items,available);
-    const height=Math.max(180,Math.ceil(margin*2+lines.length*lineHeight));
+    const inkItems=items.filter(item=>item.image);
+    const ascent=Math.max(size,...inkItems.map(item=>item.itemHeight-item.baseline));
+    const descent=Math.max(0,...inkItems.map(item=>item.baseline));
+    lineHeight=Math.max(lineHeight,ascent+descent+size*.14);
+    const height=Math.max(180,Math.ceil(margin*2+ascent+descent+(lines.length-1)*lineHeight));
     if(height>8192||height*width>16000000)throw new Error('Too much text for one image. Reduce letter size or split your message.');
     canvas.width=width;
     canvas.height=height;
@@ -187,7 +203,7 @@ async function render(){
     context.imageSmoothingQuality='high';
     context.fillStyle=els.bg.value;
     context.fillRect(0,0,canvas.width,canvas.height);
-    let y=margin+.88*lineHeight;
+    let y=margin+ascent;
     for(const line of lines){
       x=margin;
       for(const item of line){
@@ -203,7 +219,7 @@ async function render(){
         context.save();
         context.translate(x+item.itemWidth/2,y-item.itemHeight/2+item.baseline);
         context.rotate(item.rotation*Math.PI/180);
-        if(mode.thick){for(let dx=-mode.thick;dx<=mode.thick;dx+=2)for(let dy=-Math.ceil(mode.thick/2);dy<=Math.ceil(mode.thick/2);dy+=2)context.drawImage(offscreen,-item.itemWidth/2+dx-12,-item.itemHeight/2+dy-12)}
+        if(thick){for(let dx=-thick;dx<=thick;dx+=2)for(let dy=-Math.ceil(thick/2);dy<=Math.ceil(thick/2);dy+=2)context.drawImage(offscreen,-item.itemWidth/2+dx-12,-item.itemHeight/2+dy-12)}
         context.drawImage(offscreen,-item.itemWidth/2-12,-item.itemHeight/2-12);
         context.restore();
         x+=item.advance;
@@ -246,7 +262,7 @@ function bind(){
   $('showBtn').addEventListener('click',()=>{if(currentPng())setStatus('PNG shown below. Long-press it to save.','ok')});
   $('clearBtn').addEventListener('click',()=>{els.text.value='';els.text.focus();scheduleRender()});
   $('installHelpBtn').addEventListener('click',()=>$('installDialog').showModal());
-  for(const id of ['text','mode','size','width','seed','color','bg']){
+  for(const id of ['dataset','text','mode','size','width','seed','color','bg']){
     const element=els[id];
     element.addEventListener(id==='text'?'input':'change',scheduleRender);
     if(['size','color','bg'].includes(id))element.addEventListener('input',scheduleRender);

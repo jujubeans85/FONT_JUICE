@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101113">
   <meta name="description" content="Type a message, render it in Adam's real handwriting, and save it as an image.">
   <title>Font Juice · Adam Hand Composer</title>
-  <link rel="stylesheet" href="working.css?v=20260910-1">
+  <link rel="stylesheet" href="working.css?v=20260910-2">
   <script>
     // Existing birthday/NFC links keep their destination. mask=7 is a composer link.
     const routeParams = new URLSearchParams(location.search);
@@ -19,7 +19,8 @@
     }
   </script>
   <script defer src="data/adam-hand-v1.b9cc17b0a0b3.js"></script>
-  <script defer src="working.js?v=20260910-1"></script>
+  <script defer src="data/adam-hand-capture03.b28f4d48280e.js"></script>
+  <script defer src="working.js?v=20260910-2"></script>
 </head>
 <body>
 <header class="site-header">
@@ -31,15 +32,16 @@
     <div class="section-heading"><h2 id="writeHeading"><label for="text">Type your text</label></h2><button id="clearBtn" class="quiet-button" type="button">Clear</button></div>
     <textarea id="text" spellcheck="true" autocapitalize="sentences" aria-describedby="textHelp" maxlength="5000">MADE WITH LOVE.
 A LITTLE WONKY. ALL ME.</textarea>
-    <p id="textHelp" class="field-help">Renders as you type. This capture set uses CAPITALS.</p>
+    <p id="textHelp" class="field-help">Renders as you type. New orange chisel capture. CAPITALS, with your natural variation.</p>
     <details class="controls-panel" open>
       <summary>Shape and layout</summary>
       <div class="controls-grid">
-        <label>Mode<select id="mode"><option value="neat">Neat</option><option value="chisel">Chisel readable</option><option value="loose">Loose</option></select></label>
+        <label>Handwriting<select id="dataset"><option value="capture-03">Orange chisel · new capture</option><option value="original">Original captures</option></select></label>
+        <label>Mode<select id="mode"><option value="untucked">Slightly untucked</option><option value="neat">Neat</option><option value="chisel">Chisel readable</option><option value="loose">Loose</option></select></label>
         <label>Letter size <output id="sizeValue">100</output><input id="size" type="range" min="50" max="190" step="1" value="100"></label>
         <label>Canvas width<input id="width" type="number" min="320" max="4096" step="10" value="1600" inputmode="numeric"></label>
         <label>Variation seed<input id="seed" type="number" value="21" inputmode="numeric"></label>
-        <label>Ink<input id="color" type="color" value="#000000"></label>
+        <label>Ink<input id="color" type="color" value="#fd9613"></label>
         <label>Background<input id="bg" type="color" value="#ffffff"></label>
       </div>
     </details>
