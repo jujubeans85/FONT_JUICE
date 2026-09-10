@@ -1,0 +1,3535 @@
+{
+  "template_id": "FJ-CAPTURE-03",
+  "page_size_mm": [
+    210,
+    297
+  ],
+  "coordinate_origin": "top-left",
+  "pages": [
+    {
+      "page": 1,
+      "title": "Letters A-M",
+      "cells": [
+        {
+          "id": "FJ3-P01-R01-V1",
+          "character": "A",
+          "variant": 1,
+          "box_mm": [
+            33,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P01-R01-V2",
+          "character": "A",
+          "variant": 2,
+          "box_mm": [
+            73,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P01-R01-V3",
+          "character": "A",
+          "variant": 3,
+          "box_mm": [
+            113,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P01-R01-V4",
+          "character": "A",
+          "variant": 4,
+          "box_mm": [
+            153,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P01-R02-V1",
+          "character": "B",
+          "variant": 1,
+          "box_mm": [
+            33,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P01-R02-V2",
+          "character": "B",
+          "variant": 2,
+          "box_mm": [
+            73,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P01-R02-V3",
+          "character": "B",
+          "variant": 3,
+          "box_mm": [
+            113,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P01-R02-V4",
+          "character": "B",
+          "variant": 4,
+          "box_mm": [
+            153,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P01-R03-V1",
+          "character": "C",
+          "variant": 1,
+          "box_mm": [
+            33,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P01-R03-V2",
+          "character": "C",
+          "variant": 2,
+          "box_mm": [
+            73,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P01-R03-V3",
+          "character": "C",
+          "variant": 3,
+          "box_mm": [
+            113,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P01-R03-V4",
+          "character": "C",
+          "variant": 4,
+          "box_mm": [
+            153,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P01-R04-V1",
+          "character": "D",
+          "variant": 1,
+          "box_mm": [
+            33,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P01-R04-V2",
+          "character": "D",
+          "variant": 2,
+          "box_mm": [
+            73,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P01-R04-V3",
+          "character": "D",
+          "variant": 3,
+          "box_mm": [
+            113,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P01-R04-V4",
+          "character": "D",
+          "variant": 4,
+          "box_mm": [
+            153,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P01-R05-V1",
+          "character": "E",
+          "variant": 1,
+          "box_mm": [
+            33,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P01-R05-V2",
+          "character": "E",
+          "variant": 2,
+          "box_mm": [
+            73,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P01-R05-V3",
+          "character": "E",
+          "variant": 3,
+          "box_mm": [
+            113,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P01-R05-V4",
+          "character": "E",
+          "variant": 4,
+          "box_mm": [
+            153,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P01-R06-V1",
+          "character": "F",
+          "variant": 1,
+          "box_mm": [
+            33,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P01-R06-V2",
+          "character": "F",
+          "variant": 2,
+          "box_mm": [
+            73,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P01-R06-V3",
+          "character": "F",
+          "variant": 3,
+          "box_mm": [
+            113,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P01-R06-V4",
+          "character": "F",
+          "variant": 4,
+          "box_mm": [
+            153,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P01-R07-V1",
+          "character": "G",
+          "variant": 1,
+          "box_mm": [
+            33,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P01-R07-V2",
+          "character": "G",
+          "variant": 2,
+          "box_mm": [
+            73,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P01-R07-V3",
+          "character": "G",
+          "variant": 3,
+          "box_mm": [
+            113,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P01-R07-V4",
+          "character": "G",
+          "variant": 4,
+          "box_mm": [
+            153,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P01-R08-V1",
+          "character": "H",
+          "variant": 1,
+          "box_mm": [
+            33,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P01-R08-V2",
+          "character": "H",
+          "variant": 2,
+          "box_mm": [
+            73,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P01-R08-V3",
+          "character": "H",
+          "variant": 3,
+          "box_mm": [
+            113,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P01-R08-V4",
+          "character": "H",
+          "variant": 4,
+          "box_mm": [
+            153,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P01-R09-V1",
+          "character": "I",
+          "variant": 1,
+          "box_mm": [
+            33,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P01-R09-V2",
+          "character": "I",
+          "variant": 2,
+          "box_mm": [
+            73,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P01-R09-V3",
+          "character": "I",
+          "variant": 3,
+          "box_mm": [
+            113,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P01-R09-V4",
+          "character": "I",
+          "variant": 4,
+          "box_mm": [
+            153,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P01-R10-V1",
+          "character": "J",
+          "variant": 1,
+          "box_mm": [
+            33,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P01-R10-V2",
+          "character": "J",
+          "variant": 2,
+          "box_mm": [
+            73,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P01-R10-V3",
+          "character": "J",
+          "variant": 3,
+          "box_mm": [
+            113,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P01-R10-V4",
+          "character": "J",
+          "variant": 4,
+          "box_mm": [
+            153,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P01-R11-V1",
+          "character": "K",
+          "variant": 1,
+          "box_mm": [
+            33,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P01-R11-V2",
+          "character": "K",
+          "variant": 2,
+          "box_mm": [
+            73,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P01-R11-V3",
+          "character": "K",
+          "variant": 3,
+          "box_mm": [
+            113,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P01-R11-V4",
+          "character": "K",
+          "variant": 4,
+          "box_mm": [
+            153,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P01-R12-V1",
+          "character": "L",
+          "variant": 1,
+          "box_mm": [
+            33,
+            235.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 246.7,
+          "cap_y_mm": 239.2
+        },
+        {
+          "id": "FJ3-P01-R12-V2",
+          "character": "L",
+          "variant": 2,
+          "box_mm": [
+            73,
+            235.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 246.7,
+          "cap_y_mm": 239.2
+        },
+        {
+          "id": "FJ3-P01-R12-V3",
+          "character": "L",
+          "variant": 3,
+          "box_mm": [
+            113,
+            235.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 246.7,
+          "cap_y_mm": 239.2
+        },
+        {
+          "id": "FJ3-P01-R12-V4",
+          "character": "L",
+          "variant": 4,
+          "box_mm": [
+            153,
+            235.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 246.7,
+          "cap_y_mm": 239.2
+        },
+        {
+          "id": "FJ3-P01-R13-V1",
+          "character": "M",
+          "variant": 1,
+          "box_mm": [
+            33,
+            250.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 261.9,
+          "cap_y_mm": 254.4
+        },
+        {
+          "id": "FJ3-P01-R13-V2",
+          "character": "M",
+          "variant": 2,
+          "box_mm": [
+            73,
+            250.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 261.9,
+          "cap_y_mm": 254.4
+        },
+        {
+          "id": "FJ3-P01-R13-V3",
+          "character": "M",
+          "variant": 3,
+          "box_mm": [
+            113,
+            250.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 261.9,
+          "cap_y_mm": 254.4
+        },
+        {
+          "id": "FJ3-P01-R13-V4",
+          "character": "M",
+          "variant": 4,
+          "box_mm": [
+            153,
+            250.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 261.9,
+          "cap_y_mm": 254.4
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "title": "Letters N-Z",
+      "cells": [
+        {
+          "id": "FJ3-P02-R01-V1",
+          "character": "N",
+          "variant": 1,
+          "box_mm": [
+            33,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P02-R01-V2",
+          "character": "N",
+          "variant": 2,
+          "box_mm": [
+            73,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P02-R01-V3",
+          "character": "N",
+          "variant": 3,
+          "box_mm": [
+            113,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P02-R01-V4",
+          "character": "N",
+          "variant": 4,
+          "box_mm": [
+            153,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P02-R02-V1",
+          "character": "O",
+          "variant": 1,
+          "box_mm": [
+            33,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P02-R02-V2",
+          "character": "O",
+          "variant": 2,
+          "box_mm": [
+            73,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P02-R02-V3",
+          "character": "O",
+          "variant": 3,
+          "box_mm": [
+            113,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P02-R02-V4",
+          "character": "O",
+          "variant": 4,
+          "box_mm": [
+            153,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P02-R03-V1",
+          "character": "P",
+          "variant": 1,
+          "box_mm": [
+            33,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P02-R03-V2",
+          "character": "P",
+          "variant": 2,
+          "box_mm": [
+            73,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P02-R03-V3",
+          "character": "P",
+          "variant": 3,
+          "box_mm": [
+            113,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P02-R03-V4",
+          "character": "P",
+          "variant": 4,
+          "box_mm": [
+            153,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P02-R04-V1",
+          "character": "Q",
+          "variant": 1,
+          "box_mm": [
+            33,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P02-R04-V2",
+          "character": "Q",
+          "variant": 2,
+          "box_mm": [
+            73,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P02-R04-V3",
+          "character": "Q",
+          "variant": 3,
+          "box_mm": [
+            113,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P02-R04-V4",
+          "character": "Q",
+          "variant": 4,
+          "box_mm": [
+            153,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P02-R05-V1",
+          "character": "R",
+          "variant": 1,
+          "box_mm": [
+            33,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P02-R05-V2",
+          "character": "R",
+          "variant": 2,
+          "box_mm": [
+            73,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P02-R05-V3",
+          "character": "R",
+          "variant": 3,
+          "box_mm": [
+            113,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P02-R05-V4",
+          "character": "R",
+          "variant": 4,
+          "box_mm": [
+            153,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P02-R06-V1",
+          "character": "S",
+          "variant": 1,
+          "box_mm": [
+            33,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P02-R06-V2",
+          "character": "S",
+          "variant": 2,
+          "box_mm": [
+            73,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P02-R06-V3",
+          "character": "S",
+          "variant": 3,
+          "box_mm": [
+            113,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P02-R06-V4",
+          "character": "S",
+          "variant": 4,
+          "box_mm": [
+            153,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P02-R07-V1",
+          "character": "T",
+          "variant": 1,
+          "box_mm": [
+            33,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P02-R07-V2",
+          "character": "T",
+          "variant": 2,
+          "box_mm": [
+            73,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P02-R07-V3",
+          "character": "T",
+          "variant": 3,
+          "box_mm": [
+            113,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P02-R07-V4",
+          "character": "T",
+          "variant": 4,
+          "box_mm": [
+            153,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P02-R08-V1",
+          "character": "U",
+          "variant": 1,
+          "box_mm": [
+            33,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P02-R08-V2",
+          "character": "U",
+          "variant": 2,
+          "box_mm": [
+            73,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P02-R08-V3",
+          "character": "U",
+          "variant": 3,
+          "box_mm": [
+            113,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P02-R08-V4",
+          "character": "U",
+          "variant": 4,
+          "box_mm": [
+            153,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P02-R09-V1",
+          "character": "V",
+          "variant": 1,
+          "box_mm": [
+            33,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P02-R09-V2",
+          "character": "V",
+          "variant": 2,
+          "box_mm": [
+            73,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P02-R09-V3",
+          "character": "V",
+          "variant": 3,
+          "box_mm": [
+            113,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P02-R09-V4",
+          "character": "V",
+          "variant": 4,
+          "box_mm": [
+            153,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P02-R10-V1",
+          "character": "W",
+          "variant": 1,
+          "box_mm": [
+            33,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P02-R10-V2",
+          "character": "W",
+          "variant": 2,
+          "box_mm": [
+            73,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P02-R10-V3",
+          "character": "W",
+          "variant": 3,
+          "box_mm": [
+            113,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P02-R10-V4",
+          "character": "W",
+          "variant": 4,
+          "box_mm": [
+            153,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P02-R11-V1",
+          "character": "X",
+          "variant": 1,
+          "box_mm": [
+            33,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P02-R11-V2",
+          "character": "X",
+          "variant": 2,
+          "box_mm": [
+            73,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P02-R11-V3",
+          "character": "X",
+          "variant": 3,
+          "box_mm": [
+            113,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P02-R11-V4",
+          "character": "X",
+          "variant": 4,
+          "box_mm": [
+            153,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P02-R12-V1",
+          "character": "Y",
+          "variant": 1,
+          "box_mm": [
+            33,
+            235.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 246.7,
+          "cap_y_mm": 239.2
+        },
+        {
+          "id": "FJ3-P02-R12-V2",
+          "character": "Y",
+          "variant": 2,
+          "box_mm": [
+            73,
+            235.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 246.7,
+          "cap_y_mm": 239.2
+        },
+        {
+          "id": "FJ3-P02-R12-V3",
+          "character": "Y",
+          "variant": 3,
+          "box_mm": [
+            113,
+            235.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 246.7,
+          "cap_y_mm": 239.2
+        },
+        {
+          "id": "FJ3-P02-R12-V4",
+          "character": "Y",
+          "variant": 4,
+          "box_mm": [
+            153,
+            235.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 246.7,
+          "cap_y_mm": 239.2
+        },
+        {
+          "id": "FJ3-P02-R13-V1",
+          "character": "Z",
+          "variant": 1,
+          "box_mm": [
+            33,
+            250.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 261.9,
+          "cap_y_mm": 254.4
+        },
+        {
+          "id": "FJ3-P02-R13-V2",
+          "character": "Z",
+          "variant": 2,
+          "box_mm": [
+            73,
+            250.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 261.9,
+          "cap_y_mm": 254.4
+        },
+        {
+          "id": "FJ3-P02-R13-V3",
+          "character": "Z",
+          "variant": 3,
+          "box_mm": [
+            113,
+            250.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 261.9,
+          "cap_y_mm": 254.4
+        },
+        {
+          "id": "FJ3-P02-R13-V4",
+          "character": "Z",
+          "variant": 4,
+          "box_mm": [
+            153,
+            250.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 261.9,
+          "cap_y_mm": 254.4
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "title": "Numbers",
+      "cells": [
+        {
+          "id": "FJ3-P03-R01-V1",
+          "character": "0",
+          "variant": 1,
+          "box_mm": [
+            33,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P03-R01-V2",
+          "character": "0",
+          "variant": 2,
+          "box_mm": [
+            73,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P03-R01-V3",
+          "character": "0",
+          "variant": 3,
+          "box_mm": [
+            113,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P03-R01-V4",
+          "character": "0",
+          "variant": 4,
+          "box_mm": [
+            153,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P03-R02-V1",
+          "character": "1",
+          "variant": 1,
+          "box_mm": [
+            33,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P03-R02-V2",
+          "character": "1",
+          "variant": 2,
+          "box_mm": [
+            73,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P03-R02-V3",
+          "character": "1",
+          "variant": 3,
+          "box_mm": [
+            113,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P03-R02-V4",
+          "character": "1",
+          "variant": 4,
+          "box_mm": [
+            153,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P03-R03-V1",
+          "character": "2",
+          "variant": 1,
+          "box_mm": [
+            33,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P03-R03-V2",
+          "character": "2",
+          "variant": 2,
+          "box_mm": [
+            73,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P03-R03-V3",
+          "character": "2",
+          "variant": 3,
+          "box_mm": [
+            113,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P03-R03-V4",
+          "character": "2",
+          "variant": 4,
+          "box_mm": [
+            153,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P03-R04-V1",
+          "character": "3",
+          "variant": 1,
+          "box_mm": [
+            33,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P03-R04-V2",
+          "character": "3",
+          "variant": 2,
+          "box_mm": [
+            73,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P03-R04-V3",
+          "character": "3",
+          "variant": 3,
+          "box_mm": [
+            113,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P03-R04-V4",
+          "character": "3",
+          "variant": 4,
+          "box_mm": [
+            153,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P03-R05-V1",
+          "character": "4",
+          "variant": 1,
+          "box_mm": [
+            33,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P03-R05-V2",
+          "character": "4",
+          "variant": 2,
+          "box_mm": [
+            73,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P03-R05-V3",
+          "character": "4",
+          "variant": 3,
+          "box_mm": [
+            113,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P03-R05-V4",
+          "character": "4",
+          "variant": 4,
+          "box_mm": [
+            153,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P03-R06-V1",
+          "character": "5",
+          "variant": 1,
+          "box_mm": [
+            33,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P03-R06-V2",
+          "character": "5",
+          "variant": 2,
+          "box_mm": [
+            73,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P03-R06-V3",
+          "character": "5",
+          "variant": 3,
+          "box_mm": [
+            113,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P03-R06-V4",
+          "character": "5",
+          "variant": 4,
+          "box_mm": [
+            153,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P03-R07-V1",
+          "character": "6",
+          "variant": 1,
+          "box_mm": [
+            33,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P03-R07-V2",
+          "character": "6",
+          "variant": 2,
+          "box_mm": [
+            73,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P03-R07-V3",
+          "character": "6",
+          "variant": 3,
+          "box_mm": [
+            113,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P03-R07-V4",
+          "character": "6",
+          "variant": 4,
+          "box_mm": [
+            153,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P03-R08-V1",
+          "character": "7",
+          "variant": 1,
+          "box_mm": [
+            33,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P03-R08-V2",
+          "character": "7",
+          "variant": 2,
+          "box_mm": [
+            73,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P03-R08-V3",
+          "character": "7",
+          "variant": 3,
+          "box_mm": [
+            113,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P03-R08-V4",
+          "character": "7",
+          "variant": 4,
+          "box_mm": [
+            153,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P03-R09-V1",
+          "character": "8",
+          "variant": 1,
+          "box_mm": [
+            33,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P03-R09-V2",
+          "character": "8",
+          "variant": 2,
+          "box_mm": [
+            73,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P03-R09-V3",
+          "character": "8",
+          "variant": 3,
+          "box_mm": [
+            113,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P03-R09-V4",
+          "character": "8",
+          "variant": 4,
+          "box_mm": [
+            153,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P03-R10-V1",
+          "character": "9",
+          "variant": 1,
+          "box_mm": [
+            33,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P03-R10-V2",
+          "character": "9",
+          "variant": 2,
+          "box_mm": [
+            73,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P03-R10-V3",
+          "character": "9",
+          "variant": 3,
+          "box_mm": [
+            113,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P03-R10-V4",
+          "character": "9",
+          "variant": 4,
+          "box_mm": [
+            153,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "title": "Punctuation",
+      "cells": [
+        {
+          "id": "FJ3-P04-R01-V1",
+          "character": ".",
+          "variant": 1,
+          "box_mm": [
+            33,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P04-R01-V2",
+          "character": ".",
+          "variant": 2,
+          "box_mm": [
+            73,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P04-R01-V3",
+          "character": ".",
+          "variant": 3,
+          "box_mm": [
+            113,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P04-R01-V4",
+          "character": ".",
+          "variant": 4,
+          "box_mm": [
+            153,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P04-R02-V1",
+          "character": ",",
+          "variant": 1,
+          "box_mm": [
+            33,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P04-R02-V2",
+          "character": ",",
+          "variant": 2,
+          "box_mm": [
+            73,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P04-R02-V3",
+          "character": ",",
+          "variant": 3,
+          "box_mm": [
+            113,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P04-R02-V4",
+          "character": ",",
+          "variant": 4,
+          "box_mm": [
+            153,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P04-R03-V1",
+          "character": ":",
+          "variant": 1,
+          "box_mm": [
+            33,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P04-R03-V2",
+          "character": ":",
+          "variant": 2,
+          "box_mm": [
+            73,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P04-R03-V3",
+          "character": ":",
+          "variant": 3,
+          "box_mm": [
+            113,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P04-R03-V4",
+          "character": ":",
+          "variant": 4,
+          "box_mm": [
+            153,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P04-R04-V1",
+          "character": ";",
+          "variant": 1,
+          "box_mm": [
+            33,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P04-R04-V2",
+          "character": ";",
+          "variant": 2,
+          "box_mm": [
+            73,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P04-R04-V3",
+          "character": ";",
+          "variant": 3,
+          "box_mm": [
+            113,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P04-R04-V4",
+          "character": ";",
+          "variant": 4,
+          "box_mm": [
+            153,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P04-R05-V1",
+          "character": "!",
+          "variant": 1,
+          "box_mm": [
+            33,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P04-R05-V2",
+          "character": "!",
+          "variant": 2,
+          "box_mm": [
+            73,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P04-R05-V3",
+          "character": "!",
+          "variant": 3,
+          "box_mm": [
+            113,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P04-R05-V4",
+          "character": "!",
+          "variant": 4,
+          "box_mm": [
+            153,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P04-R06-V1",
+          "character": "?",
+          "variant": 1,
+          "box_mm": [
+            33,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P04-R06-V2",
+          "character": "?",
+          "variant": 2,
+          "box_mm": [
+            73,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P04-R06-V3",
+          "character": "?",
+          "variant": 3,
+          "box_mm": [
+            113,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P04-R06-V4",
+          "character": "?",
+          "variant": 4,
+          "box_mm": [
+            153,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P04-R07-V1",
+          "character": "'",
+          "variant": 1,
+          "box_mm": [
+            33,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P04-R07-V2",
+          "character": "'",
+          "variant": 2,
+          "box_mm": [
+            73,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P04-R07-V3",
+          "character": "'",
+          "variant": 3,
+          "box_mm": [
+            113,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P04-R07-V4",
+          "character": "'",
+          "variant": 4,
+          "box_mm": [
+            153,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P04-R08-V1",
+          "character": "\"",
+          "variant": 1,
+          "box_mm": [
+            33,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P04-R08-V2",
+          "character": "\"",
+          "variant": 2,
+          "box_mm": [
+            73,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P04-R08-V3",
+          "character": "\"",
+          "variant": 3,
+          "box_mm": [
+            113,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P04-R08-V4",
+          "character": "\"",
+          "variant": 4,
+          "box_mm": [
+            153,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P04-R09-V1",
+          "character": "-",
+          "variant": 1,
+          "box_mm": [
+            33,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P04-R09-V2",
+          "character": "-",
+          "variant": 2,
+          "box_mm": [
+            73,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P04-R09-V3",
+          "character": "-",
+          "variant": 3,
+          "box_mm": [
+            113,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P04-R09-V4",
+          "character": "-",
+          "variant": 4,
+          "box_mm": [
+            153,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P04-R10-V1",
+          "character": "_",
+          "variant": 1,
+          "box_mm": [
+            33,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P04-R10-V2",
+          "character": "_",
+          "variant": 2,
+          "box_mm": [
+            73,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P04-R10-V3",
+          "character": "_",
+          "variant": 3,
+          "box_mm": [
+            113,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P04-R10-V4",
+          "character": "_",
+          "variant": 4,
+          "box_mm": [
+            153,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P04-R11-V1",
+          "character": "@",
+          "variant": 1,
+          "box_mm": [
+            33,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P04-R11-V2",
+          "character": "@",
+          "variant": 2,
+          "box_mm": [
+            73,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P04-R11-V3",
+          "character": "@",
+          "variant": 3,
+          "box_mm": [
+            113,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        },
+        {
+          "id": "FJ3-P04-R11-V4",
+          "character": "@",
+          "variant": 4,
+          "box_mm": [
+            153,
+            220.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 231.5,
+          "cap_y_mm": 224.0
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "title": "Symbols 1",
+      "cells": [
+        {
+          "id": "FJ3-P05-R01-V1",
+          "character": "#",
+          "variant": 1,
+          "box_mm": [
+            33,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P05-R01-V2",
+          "character": "#",
+          "variant": 2,
+          "box_mm": [
+            73,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P05-R01-V3",
+          "character": "#",
+          "variant": 3,
+          "box_mm": [
+            113,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P05-R01-V4",
+          "character": "#",
+          "variant": 4,
+          "box_mm": [
+            153,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P05-R02-V1",
+          "character": "$",
+          "variant": 1,
+          "box_mm": [
+            33,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P05-R02-V2",
+          "character": "$",
+          "variant": 2,
+          "box_mm": [
+            73,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P05-R02-V3",
+          "character": "$",
+          "variant": 3,
+          "box_mm": [
+            113,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P05-R02-V4",
+          "character": "$",
+          "variant": 4,
+          "box_mm": [
+            153,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P05-R03-V1",
+          "character": "%",
+          "variant": 1,
+          "box_mm": [
+            33,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P05-R03-V2",
+          "character": "%",
+          "variant": 2,
+          "box_mm": [
+            73,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P05-R03-V3",
+          "character": "%",
+          "variant": 3,
+          "box_mm": [
+            113,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P05-R03-V4",
+          "character": "%",
+          "variant": 4,
+          "box_mm": [
+            153,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P05-R04-V1",
+          "character": "&",
+          "variant": 1,
+          "box_mm": [
+            33,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P05-R04-V2",
+          "character": "&",
+          "variant": 2,
+          "box_mm": [
+            73,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P05-R04-V3",
+          "character": "&",
+          "variant": 3,
+          "box_mm": [
+            113,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P05-R04-V4",
+          "character": "&",
+          "variant": 4,
+          "box_mm": [
+            153,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P05-R05-V1",
+          "character": "*",
+          "variant": 1,
+          "box_mm": [
+            33,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P05-R05-V2",
+          "character": "*",
+          "variant": 2,
+          "box_mm": [
+            73,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P05-R05-V3",
+          "character": "*",
+          "variant": 3,
+          "box_mm": [
+            113,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P05-R05-V4",
+          "character": "*",
+          "variant": 4,
+          "box_mm": [
+            153,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P05-R06-V1",
+          "character": "+",
+          "variant": 1,
+          "box_mm": [
+            33,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P05-R06-V2",
+          "character": "+",
+          "variant": 2,
+          "box_mm": [
+            73,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P05-R06-V3",
+          "character": "+",
+          "variant": 3,
+          "box_mm": [
+            113,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P05-R06-V4",
+          "character": "+",
+          "variant": 4,
+          "box_mm": [
+            153,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P05-R07-V1",
+          "character": "=",
+          "variant": 1,
+          "box_mm": [
+            33,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P05-R07-V2",
+          "character": "=",
+          "variant": 2,
+          "box_mm": [
+            73,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P05-R07-V3",
+          "character": "=",
+          "variant": 3,
+          "box_mm": [
+            113,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P05-R07-V4",
+          "character": "=",
+          "variant": 4,
+          "box_mm": [
+            153,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P05-R08-V1",
+          "character": "/",
+          "variant": 1,
+          "box_mm": [
+            33,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P05-R08-V2",
+          "character": "/",
+          "variant": 2,
+          "box_mm": [
+            73,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P05-R08-V3",
+          "character": "/",
+          "variant": 3,
+          "box_mm": [
+            113,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P05-R08-V4",
+          "character": "/",
+          "variant": 4,
+          "box_mm": [
+            153,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P05-R09-V1",
+          "character": "\\",
+          "variant": 1,
+          "box_mm": [
+            33,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P05-R09-V2",
+          "character": "\\",
+          "variant": 2,
+          "box_mm": [
+            73,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P05-R09-V3",
+          "character": "\\",
+          "variant": 3,
+          "box_mm": [
+            113,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P05-R09-V4",
+          "character": "\\",
+          "variant": 4,
+          "box_mm": [
+            153,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P05-R10-V1",
+          "character": "(",
+          "variant": 1,
+          "box_mm": [
+            33,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P05-R10-V2",
+          "character": "(",
+          "variant": 2,
+          "box_mm": [
+            73,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P05-R10-V3",
+          "character": "(",
+          "variant": 3,
+          "box_mm": [
+            113,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P05-R10-V4",
+          "character": "(",
+          "variant": 4,
+          "box_mm": [
+            153,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "title": "Symbols 2",
+      "cells": [
+        {
+          "id": "FJ3-P06-R01-V1",
+          "character": ")",
+          "variant": 1,
+          "box_mm": [
+            33,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P06-R01-V2",
+          "character": ")",
+          "variant": 2,
+          "box_mm": [
+            73,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P06-R01-V3",
+          "character": ")",
+          "variant": 3,
+          "box_mm": [
+            113,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P06-R01-V4",
+          "character": ")",
+          "variant": 4,
+          "box_mm": [
+            153,
+            68.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 79.5,
+          "cap_y_mm": 72.0
+        },
+        {
+          "id": "FJ3-P06-R02-V1",
+          "character": "[",
+          "variant": 1,
+          "box_mm": [
+            33,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P06-R02-V2",
+          "character": "[",
+          "variant": 2,
+          "box_mm": [
+            73,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P06-R02-V3",
+          "character": "[",
+          "variant": 3,
+          "box_mm": [
+            113,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P06-R02-V4",
+          "character": "[",
+          "variant": 4,
+          "box_mm": [
+            153,
+            83.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 94.7,
+          "cap_y_mm": 87.2
+        },
+        {
+          "id": "FJ3-P06-R03-V1",
+          "character": "]",
+          "variant": 1,
+          "box_mm": [
+            33,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P06-R03-V2",
+          "character": "]",
+          "variant": 2,
+          "box_mm": [
+            73,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P06-R03-V3",
+          "character": "]",
+          "variant": 3,
+          "box_mm": [
+            113,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P06-R03-V4",
+          "character": "]",
+          "variant": 4,
+          "box_mm": [
+            153,
+            98.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 109.9,
+          "cap_y_mm": 102.4
+        },
+        {
+          "id": "FJ3-P06-R04-V1",
+          "character": "{",
+          "variant": 1,
+          "box_mm": [
+            33,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P06-R04-V2",
+          "character": "{",
+          "variant": 2,
+          "box_mm": [
+            73,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P06-R04-V3",
+          "character": "{",
+          "variant": 3,
+          "box_mm": [
+            113,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P06-R04-V4",
+          "character": "{",
+          "variant": 4,
+          "box_mm": [
+            153,
+            113.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 125.1,
+          "cap_y_mm": 117.6
+        },
+        {
+          "id": "FJ3-P06-R05-V1",
+          "character": "}",
+          "variant": 1,
+          "box_mm": [
+            33,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P06-R05-V2",
+          "character": "}",
+          "variant": 2,
+          "box_mm": [
+            73,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P06-R05-V3",
+          "character": "}",
+          "variant": 3,
+          "box_mm": [
+            113,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P06-R05-V4",
+          "character": "}",
+          "variant": 4,
+          "box_mm": [
+            153,
+            128.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 140.3,
+          "cap_y_mm": 132.8
+        },
+        {
+          "id": "FJ3-P06-R06-V1",
+          "character": "<",
+          "variant": 1,
+          "box_mm": [
+            33,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P06-R06-V2",
+          "character": "<",
+          "variant": 2,
+          "box_mm": [
+            73,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P06-R06-V3",
+          "character": "<",
+          "variant": 3,
+          "box_mm": [
+            113,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P06-R06-V4",
+          "character": "<",
+          "variant": 4,
+          "box_mm": [
+            153,
+            144.0,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 155.5,
+          "cap_y_mm": 148.0
+        },
+        {
+          "id": "FJ3-P06-R07-V1",
+          "character": ">",
+          "variant": 1,
+          "box_mm": [
+            33,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P06-R07-V2",
+          "character": ">",
+          "variant": 2,
+          "box_mm": [
+            73,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P06-R07-V3",
+          "character": ">",
+          "variant": 3,
+          "box_mm": [
+            113,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P06-R07-V4",
+          "character": ">",
+          "variant": 4,
+          "box_mm": [
+            153,
+            159.2,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 170.7,
+          "cap_y_mm": 163.2
+        },
+        {
+          "id": "FJ3-P06-R08-V1",
+          "character": "~",
+          "variant": 1,
+          "box_mm": [
+            33,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P06-R08-V2",
+          "character": "~",
+          "variant": 2,
+          "box_mm": [
+            73,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P06-R08-V3",
+          "character": "~",
+          "variant": 3,
+          "box_mm": [
+            113,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P06-R08-V4",
+          "character": "~",
+          "variant": 4,
+          "box_mm": [
+            153,
+            174.4,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 185.9,
+          "cap_y_mm": 178.4
+        },
+        {
+          "id": "FJ3-P06-R09-V1",
+          "character": "^",
+          "variant": 1,
+          "box_mm": [
+            33,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P06-R09-V2",
+          "character": "^",
+          "variant": 2,
+          "box_mm": [
+            73,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P06-R09-V3",
+          "character": "^",
+          "variant": 3,
+          "box_mm": [
+            113,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P06-R09-V4",
+          "character": "^",
+          "variant": 4,
+          "box_mm": [
+            153,
+            189.6,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 201.1,
+          "cap_y_mm": 193.6
+        },
+        {
+          "id": "FJ3-P06-R10-V1",
+          "character": "|",
+          "variant": 1,
+          "box_mm": [
+            33,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P06-R10-V2",
+          "character": "|",
+          "variant": 2,
+          "box_mm": [
+            73,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P06-R10-V3",
+          "character": "|",
+          "variant": 3,
+          "box_mm": [
+            113,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        },
+        {
+          "id": "FJ3-P06-R10-V4",
+          "character": "|",
+          "variant": 4,
+          "box_mm": [
+            153,
+            204.8,
+            38.4,
+            14.2
+          ],
+          "baseline_y_mm": 216.3,
+          "cap_y_mm": 208.8
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "title": "Natural writing",
+      "optional": true
+    }
+  ]
+}

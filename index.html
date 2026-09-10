@@ -1,1 +1,60 @@
-<!doctype html><title>MIMI 21</title><meta name="viewport" content="width=device-width,initial-scale=1"><p>Opening MIMI 21.</p><p><a id="go" href="mimi21/">Open</a></p><script>const u=new URL('mimi21/',location.href);u.search=location.search;u.hash=location.hash;go.href=u.href;location.replace(u.href);</script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="Type a message, render it in Adam's real handwriting, and save it as an image.">
+  <title>Font Juice · Adam Hand Composer</title>
+  <link rel="stylesheet" href="working.css?v=20260910-1">
+  <script>
+    // Existing birthday/NFC links keep their destination. mask=7 is a composer link.
+    const routeParams = new URLSearchParams(location.search);
+    if (['fish','id','slot','tag','nfc'].some(key => routeParams.has(key))) {
+      const target = new URL('mimi21/', location.href);
+      if (routeParams.has('nfc') && !routeParams.has('slot')) routeParams.set('slot', routeParams.get('nfc'));
+      target.search = routeParams.toString();
+      target.hash = location.hash;
+      location.replace(target.href);
+    }
+  </script>
+  <script defer src="data/adam-hand-v1.b9cc17b0a0b3.js"></script>
+  <script defer src="working.js?v=20260910-1"></script>
+</head>
+<body>
+<header class="site-header">
+  <div><p class="eyebrow">FONT_JUICE</p><h1>Adam Hand Composer</h1><p class="subhead">Your words. Your handwriting.</p></div>
+  <div class="status-cluster"><span id="readyDot" class="ready-dot"></span><span id="status" role="status" aria-live="polite">Starting…</span></div>
+</header>
+<main class="app-shell">
+  <section class="editor-card" aria-labelledby="writeHeading">
+    <div class="section-heading"><h2 id="writeHeading"><label for="text">Type your text</label></h2><button id="clearBtn" class="quiet-button" type="button">Clear</button></div>
+    <textarea id="text" spellcheck="true" autocapitalize="sentences" aria-describedby="textHelp" maxlength="5000">MADE WITH LOVE.
+A LITTLE WONKY. ALL ME.</textarea>
+    <p id="textHelp" class="field-help">Renders as you type. This capture set uses CAPITALS.</p>
+    <details class="controls-panel" open>
+      <summary>Shape and layout</summary>
+      <div class="controls-grid">
+        <label>Mode<select id="mode"><option value="neat">Neat</option><option value="chisel">Chisel readable</option><option value="loose">Loose</option></select></label>
+        <label>Letter size <output id="sizeValue">100</output><input id="size" type="range" min="50" max="190" step="1" value="100"></label>
+        <label>Canvas width<input id="width" type="number" min="320" max="4096" step="10" value="1600" inputmode="numeric"></label>
+        <label>Variation seed<input id="seed" type="number" value="21" inputmode="numeric"></label>
+        <label>Ink<input id="color" type="color" value="#000000"></label>
+        <label>Background<input id="bg" type="color" value="#ffffff"></label>
+      </div>
+    </details>
+    <div class="button-grid"><button id="renderBtn" class="primary-button" type="button">Render now</button><button id="shuffleBtn" type="button">Shuffle handwriting</button></div>
+    <a class="template-link" href="templates/FONT_JUICE_Handwriting_Template.pdf" target="_blank" rel="noopener"><span aria-hidden="true">✎</span><span><strong>Handwriting template</strong><small>A4 · four samples per character · print or write on iPad</small></span><span aria-hidden="true">↗</span></a>
+  </section>
+  <section class="preview-card" aria-labelledby="previewHeading">
+    <div class="section-heading"><h2 id="previewHeading">Your handwriting</h2><span id="dimensions" class="dimensions">—</span></div>
+    <div class="canvas-wrap"><canvas id="canvas" aria-label="Your message rendered in Adam's handwriting"></canvas></div>
+    <div class="button-grid"><button id="saveBtn" class="primary-button" type="button" disabled>Save / Share PNG</button><button id="showBtn" type="button" disabled>Show PNG</button></div>
+    <div id="exportPanel" class="export-panel" hidden><p><strong>PNG ready.</strong> On iPhone or iPad, long-press the image to save it.</p><img id="exportPreview" alt="Rendered handwriting PNG"></div>
+  </section>
+</main>
+<footer><span>Your text stays on this device.<small id="buildInfo">Build loading</small></span><button id="installHelpBtn" class="text-button" type="button">Add to Home Screen</button></footer>
+<dialog id="installDialog"><form method="dialog"><h2>Keep Font Juice handy</h2><p>In Safari, open Share, then choose Add to Home Screen.</p><p>Open it while connected. Your text and settings are saved in this browser.</p><button class="primary-button">Done</button></form></dialog>
+<noscript><p class="no-script">Enable JavaScript to render your handwriting.</p></noscript>
+</body>
+</html>

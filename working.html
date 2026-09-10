@@ -1,5 +1,22 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Font Juice</title><link rel="stylesheet" href="working.css?v=20260621-1"></head><body>
-<header class="site-header"><div><p class="eyebrow">FONT_JUICE</p><h1>Adam Hand Composer</h1><p class="subhead">Real captured glyphs. Controlled groove.</p></div><div class="status-cluster"><span id="readyDot" class="ready-dot"></span><span id="status" role="status" aria-live="polite">Starting</span></div></header>
-<main class="app-shell"><section class="editor-card"><div class="section-heading"><h2>Write</h2><button id="clearBtn" class="quiet-button" type="button">Clear</button></div><textarea id="text" spellcheck="false" autocapitalize="characters">IS MAKING IT READABLE WITH MY SIZED CHISEL TIP PEN!!</textarea><details class="controls-panel" open><summary>Shape and layout</summary><div class="controls-grid"><label>Mode<select id="mode"><option value="chisel">Chisel readable</option><option value="neat">Neat</option><option value="loose">Loose</option></select></label><label>Letter size <output id="sizeValue">125</output><input id="size" type="range" min="50" max="190" step="1" value="125"></label><label>Canvas width<input id="width" type="number" min="320" max="4096" step="10" value="1600"></label><label>Seed<input id="seed" type="number" value="21"></label><label>Ink<input id="color" type="color" value="#000000"></label><label>Background<input id="bg" type="color" value="#ffffff"></label></div></details><div class="button-grid"><button id="shuffleBtn" class="primary-button" type="button">Shuffle handwriting</button><button id="renderBtn" type="button">Render now</button></div></section><section class="preview-card"><div class="section-heading"><h2>Preview</h2><span id="dimensions" class="dimensions">-</span></div><div class="canvas-wrap"><canvas id="canvas"></canvas></div><div class="button-grid"><button id="saveBtn" class="primary-button" type="button">Save / Share PNG</button><button id="showBtn" type="button">Show PNG</button></div><div id="exportPanel" class="export-panel" hidden><p><strong>PNG ready.</strong></p><img id="exportPreview" alt="Rendered handwriting PNG"></div></section></main>
-<footer><span>Private by design.<small id="buildInfo">Build loading</small></span><button id="installHelpBtn" class="text-button" type="button">Install</button></footer><dialog id="installDialog"><form method="dialog"><h2>Install</h2><p>Use browser share menu.</p><button class="primary-button">Done</button></form></dialog><script src="working.js?v=20260704-route-3"></script><script src="mimi-21-router.js?v=20260704-route-3"></script></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Font Juice</title></head>
+<body><p>Opening Font Juice…</p><p><a id="go" href="./">Open Font Juice</a></p>
+<script>
+(async()=>{
+  const target=new URL('./',location.href);target.search=location.search;target.hash=location.hash;
+  document.getElementById('go').href=target.href;
+  // Old workers redirected root -> working.html. Retire them before going back.
+  try{
+    if('serviceWorker' in navigator){
+      const registrations=await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.filter(r=>r.scope===target.origin+target.pathname).map(r=>r.unregister()));
+    }
+    if('caches' in globalThis){
+      const names=await caches.keys();
+      await Promise.all(names.filter(name=>name.startsWith('font-juice-')).map(name=>caches.delete(name)));
+    }
+  }catch(error){console.warn(error)}
+  location.replace(target.href);
+})();
+</script>
+</body></html>
