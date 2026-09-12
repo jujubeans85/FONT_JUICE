@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-title" content="juice fonts">
   <meta name="theme-color" content="#101113">
   <meta name="description" content="Type a message, render it in Adam's real handwriting, and save it as an image.">
-  <title>Font Juice · Adam Hand Composer</title>
-  <link rel="stylesheet" href="working.css?v=20260910-2">
+  <title>juice fonts</title>
+  <link rel="stylesheet" href="working.css?v=20260912-1">
   <script>
     // Existing birthday/NFC links keep their destination. mask=7 is a composer link.
     const routeParams = new URLSearchParams(location.search);
@@ -20,11 +21,12 @@
   </script>
   <script defer src="data/adam-hand-v1.b9cc17b0a0b3.js"></script>
   <script defer src="data/adam-hand-capture03.b28f4d48280e.js"></script>
-  <script defer src="working.js?v=20260910-2"></script>
+  <script defer src="speech.js?v=20260912-1"></script>
+  <script defer src="working.js?v=20260912-1"></script>
 </head>
 <body>
 <header class="site-header">
-  <div><p class="eyebrow">FONT_JUICE</p><h1>Adam Hand Composer</h1><p class="subhead">Your words. Your handwriting.</p></div>
+  <div><p class="eyebrow">YOUR HAND, ON TAP</p><h1>juice fonts</h1><p class="subhead">Your words. Your handwriting.</p></div>
   <div class="status-cluster"><span id="readyDot" class="ready-dot"></span><span id="status" role="status" aria-live="polite">Starting…</span></div>
 </header>
 <main class="app-shell">
@@ -33,6 +35,8 @@
     <textarea id="text" spellcheck="true" autocapitalize="sentences" aria-describedby="textHelp" maxlength="5000">MADE WITH LOVE.
 A LITTLE WONKY. ALL ME.</textarea>
     <p id="textHelp" class="field-help">Renders as you type. New orange chisel capture. CAPITALS, with your natural variation.</p>
+    <div class="speech-controls"><button id="speechBtn" type="button" aria-pressed="false" aria-describedby="speechStatus">🎙 Speak to add text</button><p id="speechStatus" class="field-help" role="status" aria-live="polite">Dictation adds to the end of your message.</p></div>
+    <p class="field-help">Dictation uses your browser’s speech service; its provider may process audio. You can also use your keyboard’s microphone.</p>
     <details class="controls-panel" open>
       <summary>Shape and layout</summary>
       <div class="controls-grid">
@@ -50,13 +54,14 @@ A LITTLE WONKY. ALL ME.</textarea>
   </section>
   <section class="preview-card" aria-labelledby="previewHeading">
     <div class="section-heading"><h2 id="previewHeading">Your handwriting</h2><span id="dimensions" class="dimensions">—</span></div>
+    <label class="transparent-control"><input id="transparent" type="checkbox"> Clear background <small>Transparent PNG for overlays</small></label>
     <div class="canvas-wrap"><canvas id="canvas" aria-label="Your message rendered in Adam's handwriting"></canvas></div>
     <div class="button-grid"><button id="saveBtn" class="primary-button" type="button" disabled>Save / Share PNG</button><button id="showBtn" type="button" disabled>Show PNG</button></div>
     <div id="exportPanel" class="export-panel" hidden><p><strong>PNG ready.</strong> On iPhone or iPad, long-press the image to save it.</p><img id="exportPreview" alt="Rendered handwriting PNG"></div>
   </section>
 </main>
-<footer><span>Your text stays on this device.<small id="buildInfo">Build loading</small></span><button id="installHelpBtn" class="text-button" type="button">Add to Home Screen</button></footer>
-<dialog id="installDialog"><form method="dialog"><h2>Keep Font Juice handy</h2><p>In Safari, open Share, then choose Add to Home Screen.</p><p>Open it while connected. Your text and settings are saved in this browser.</p><button class="primary-button">Done</button></form></dialog>
+<footer><span>Handwriting renders on this device.<small id="buildInfo">Build loading</small></span><button id="installHelpBtn" class="text-button" type="button">Add to Home Screen</button></footer>
+<dialog id="installDialog"><form method="dialog"><h2>Keep juice fonts handy</h2><p>In Safari, open Share, then choose Add to Home Screen.</p><p>Open it while connected. Your text and settings are saved in this browser.</p><button class="primary-button">Done</button></form></dialog>
 <noscript><p class="no-script">Enable JavaScript to render your handwriting.</p></noscript>
 </body>
 </html>

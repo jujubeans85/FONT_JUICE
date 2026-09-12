@@ -13,7 +13,7 @@ function element(value=''){
   scrollIntoView(){},focus(){},showModal(){},remove(){},click(){this.listeners.click?.()}};
 }
 const defaults={dataset:'original',text:'MADE WITH LOVE.\nA LITTLE WONKY. ALL ME.',mode:'neat',size:'100',width:'1600',seed:'21',color:'#000000',bg:'#ffffff'};
-const elements=Object.fromEntries(['dataset','textHelp','text','mode','size','sizeValue','width','seed','color','bg','status','readyDot','dimensions','exportPanel','exportPreview','buildInfo','renderBtn','shuffleBtn','saveBtn','showBtn','clearBtn','installHelpBtn','installDialog'].map(k=>[k,element(defaults[k]||'')]));
+const elements=Object.fromEntries(['dataset','textHelp','text','mode','size','sizeValue','width','seed','color','bg','transparent','status','readyDot','dimensions','exportPanel','exportPreview','buildInfo','renderBtn','shuffleBtn','saveBtn','showBtn','clearBtn','installHelpBtn','installDialog'].map(k=>[k,element(defaults[k]||'')]));
 elements.canvas=createCanvas(300,150);
 const storage=new Map();
 const errors=[];
@@ -27,7 +27,7 @@ const datasetName=fs.readdirSync(path.join(root,'data')).find(n=>/^adam-hand-v1\
 vm.runInContext(fs.readFileSync(path.join(root,'data',datasetName),'utf8'),sandbox);
 const captureName=fs.readdirSync(path.join(root,'data')).find(n=>/^adam-hand-capture03\..*\.js$/.test(n));
 vm.runInContext(fs.readFileSync(path.join(root,'data',captureName),'utf8'),sandbox);
-const source=fs.readFileSync(path.join(root,'working.js'),'utf8').replace('start();\n})();','globalThis.testApi={prepareGlyphMask,getGlyphs,render,loadDataset,normaliseText,scheduleRender,currentPng,layoutItems};\n})();');
+const source=fs.readFileSync(path.join(root,'working.js'),'utf8').replace('start();\n})();','globalThis.testApi={prepareGlyphMask,getGlyphs,render,loadDataset,normaliseText,scheduleRender,currentPng,layoutItems,restoreState};\n})();');
 vm.runInContext(source,sandbox);
 const api=sandbox.testApi;
 function coverage(canvas){const d=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;let count=0;for(let i=3;i<d.length;i+=4)if(d[i]>12)count++;return count/(d.length/4)}
@@ -57,6 +57,16 @@ async function run(){
  assert.match(elements.status.textContent,/Ready/);assert.equal(elements.saveBtn.disabled,false);
  assert(colourCount([0,0,0])>1000,'actual dark strokes rendered');
  assert(colourCount([255,255,255])>elements.canvas.width*elements.canvas.height*.5,'background remains open');
+ elements.transparent.checked=true;await api.render();
+ assert.equal(elements.canvas.getContext('2d').getImageData(0,0,1,1).data[3],0);
+ assert(coverage(elements.canvas)>.01&&coverage(elements.canvas)<.5,'transparent canvas retains ink');
+ const transparentImage=await loadImage(api.currentPng());
+ const roundtrip=createCanvas(transparentImage.width,transparentImage.height);
+ roundtrip.getContext('2d').drawImage(transparentImage,0,0);
+ assert.equal(roundtrip.getContext('2d').getImageData(0,0,1,1).data[3],0,'exported PNG has transparent margins');
+ elements.transparent.checked=false;api.restoreState();assert.equal(elements.transparent.checked,true,'transparency persists');
+ elements.transparent.checked=false;await api.render();
+ assert.equal(elements.canvas.getContext('2d').getImageData(0,0,1,1).data[3],255,'solid background restored');
  const first=composition();await api.render();assert(first.equals(composition()),'seed is repeatable');
  if(pngDir){fs.mkdirSync(pngDir,{recursive:true});fs.writeFileSync(path.join(pngDir,'neat.png'),first)}
  elements.mode.value='chisel';await api.render();const chisel=composition();assert(!first.equals(chisel),'chisel differs');

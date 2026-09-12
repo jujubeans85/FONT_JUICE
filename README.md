@@ -1,4 +1,4 @@
-# FONT_JUICE
+# juice fonts
 
 A mobile-first handwriting composer made from Adam's real captured glyphs. Type a message, render it locally, and export a PNG.
 
@@ -6,7 +6,13 @@ A mobile-first handwriting composer made from Adam's real captured glyphs. Type 
 
 The canonical app is the repository root (`index.html`), including existing `?mask=7` links. `working.html` redirects to it while preserving the query and hash. Explicit birthday/NFC queries (`fish`, `id`, `slot`, `tag`, `nfc`) still open `mimi21/`. Other existing sub-apps are unchanged.
 
-The footer identifies `Build 2026-09-10-capture-03`. New users start with the orange chisel capture and Slightly untucked preset. Existing text and settings are retained; the Handwriting selector can switch between capture sets.
+The footer identifies `Build 2026-09-12-voice-transparent`. New users start with the orange chisel capture and Slightly untucked preset. Existing text and settings are retained; the Handwriting selector can switch between capture sets.
+
+## Speech and transparent export
+
+**Speak to add text** appends finalized dictation to the message and renders automatically. Stop listening ends the session; typing or Clear cancels it and ignores late results. Browser SpeechRecognition (including the WebKit prefix) is optional. Unsupported browsers show keyboard-microphone guidance. Recognition may use the browser provider's online speech service and microphone permission; handwriting rendering and PNG export remain local. Native microphone behavior still needs a device check.
+
+**Clear background** exports a PNG with actual alpha transparency, shown over a checkerboard in the app. Turn it off to use the Background colour. The choice is saved with existing settings. The app is named **juice fonts**; existing repository URLs and saved messages are preserved.
 
 ## Orange chisel capture (10 September 2026)
 

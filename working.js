@@ -1,6 +1,6 @@
 (()=>{
 'use strict';
-const BUILD_ID='2026-09-10-capture-03';
+const BUILD_ID='2026-09-12-voice-transparent';
 let DATA={},METADATA=null;
 const MODES={
   untucked:{rot:.8,base:.012,scale:.02,track:.07,space:.50,thick:0,line:1.42},
@@ -11,7 +11,7 @@ const MODES={
 const $=id=>document.getElementById(id);
 const els={
   dataset:$('dataset'),text:$('text'),mode:$('mode'),size:$('size'),sizeValue:$('sizeValue'),width:$('width'),seed:$('seed'),
-  color:$('color'),bg:$('bg'),canvas:$('canvas'),status:$('status'),readyDot:$('readyDot'),
+  color:$('color'),bg:$('bg'),transparent:$('transparent'),canvas:$('canvas'),status:$('status'),readyDot:$('readyDot'),
   dimensions:$('dimensions'),exportPanel:$('exportPanel'),exportPreview:$('exportPreview')
 };
 const imagePromises=new Map();
@@ -134,11 +134,12 @@ function getGlyphs(character){
   return imagePromises.get(character);
 }
 function hasRoute(){const params=new URLSearchParams(location.search);return params.has('fish')||params.has('id')||params.has('slot')||params.has('tag')||params.has('nfc')}
-function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({dataset:els.dataset.value,text:els.text.value,mode:els.mode.value,size:els.size.value,width:els.width.value,seed:els.seed.value,color:els.color.value,bg:els.bg.value}))}catch{}}
+function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({dataset:els.dataset.value,text:els.text.value,mode:els.mode.value,size:els.size.value,width:els.width.value,seed:els.seed.value,color:els.color.value,bg:els.bg.value,transparent:els.transparent.checked}))}catch{}}
 function restoreState(){
   try{
     if(hasRoute())throw new Error('route-owned state');
     const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
+    els.transparent.checked=state?.transparent===true;
     if(state)for(const key of ['dataset','text','mode','size','width','seed','color','bg'])if(state[key]!==undefined&&els[key])els[key].value=state[key];
   }catch{}
   els.sizeValue.value=els.size.value;
@@ -198,11 +199,13 @@ async function render(){
     if(height>8192||height*width>16000000)throw new Error('Too much text for one image. Reduce letter size or split your message.');
     canvas.width=width;
     canvas.height=height;
-    const context=canvas.getContext('2d',{alpha:false});
+    const context=canvas.getContext('2d',{alpha:true});
     context.imageSmoothingEnabled=true;
     context.imageSmoothingQuality='high';
-    context.fillStyle=els.bg.value;
-    context.fillRect(0,0,canvas.width,canvas.height);
+    if(!els.transparent.checked){
+      context.fillStyle=els.bg.value;
+      context.fillRect(0,0,canvas.width,canvas.height);
+    }
     let y=margin+ascent;
     for(const line of lines){
       x=margin;
@@ -243,11 +246,11 @@ function downloadBlob(blob,filename){if(lastObjectUrl)URL.revokeObjectURL(lastOb
 function saveOrShare(){
   const dataUrl=currentPng();
   if(!dataUrl)return;
-  const filename=`adam-hand-${Date.now()}.png`;
+  const filename=`juice-fonts-${Date.now()}.png`;
   const blob=dataUrlToBlob(dataUrl);
   if(typeof File!=='undefined'&&navigator.share){
     const file=new File([blob],filename,{type:'image/png'});
-    const shareData={files:[file],title:'Adam Hand PNG'};
+    const shareData={files:[file],title:'juice fonts PNG'};
     if(!navigator.canShare||navigator.canShare(shareData)){
       navigator.share(shareData).then(()=>setStatus('PNG shared or saved.','ok')).catch(error=>{if(error&&error.name!=='AbortError')downloadBlob(blob,filename)});
       return;
@@ -256,13 +259,14 @@ function saveOrShare(){
   downloadBlob(blob,filename);
 }
 function bind(){
+  const speech=globalThis.JuiceFontsSpeech.attach({text:els.text,button:$('speechBtn'),status:$('speechStatus'),onInput:scheduleRender});
   $('renderBtn').addEventListener('click',render);
   $('shuffleBtn').addEventListener('click',()=>{els.seed.value=String((Date.now()%1000000)||1);render()});
   $('saveBtn').addEventListener('click',saveOrShare);
   $('showBtn').addEventListener('click',()=>{if(currentPng())setStatus('PNG shown below. Long-press it to save.','ok')});
-  $('clearBtn').addEventListener('click',()=>{els.text.value='';els.text.focus();scheduleRender()});
+  $('clearBtn').addEventListener('click',()=>{speech.cancel();els.text.value='';els.text.focus();scheduleRender()});
   $('installHelpBtn').addEventListener('click',()=>$('installDialog').showModal());
-  for(const id of ['dataset','text','mode','size','width','seed','color','bg']){
+  for(const id of ['dataset','text','mode','size','width','seed','color','bg','transparent']){
     const element=els[id];
     element.addEventListener(id==='text'?'input':'change',scheduleRender);
     if(['size','color','bg'].includes(id))element.addEventListener('input',scheduleRender);
