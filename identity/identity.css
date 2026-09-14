@@ -1,0 +1,4 @@
+:root{--juice-identity:#B8E348;--juice-identity-ink:#19210D}
+.juice-identity-mark{width:48px;height:48px;border-radius:14px;object-fit:contain;vertical-align:middle;flex-shrink:0}
+h1 .juice-identity-mark{margin-right:12px}
+:root{--bg:#141A0F;--panel:#1E2717;--panel2:#29351F;--line:#48583A}body{background:radial-gradient(circle at 50% -20%,#384726,var(--bg) 48%)}.eyebrow{color:var(--juice-identity)}.primary-button{background:var(--juice-identity);color:var(--juice-identity-ink)}
