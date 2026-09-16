@@ -1,0 +1,11 @@
+{
+  "name": "juice-fonts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/composer.cjs && node tests/speech.cjs"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "0.1.100"
+  }
+}
