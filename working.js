@@ -1,7 +1,7 @@
 (()=>{
 'use strict';
-const BUILD_ID='2026-09-12-voice-transparent';
-let DATA={},METADATA=null;
+const BUILD_ID='2026-09-21-six-backgrounds';
+let DATA={},METADATA=null,backgrounds=null;
 const MODES={
   untucked:{rot:.8,base:.012,scale:.02,track:.07,space:.50,thick:0,line:1.42},
   neat:{rot:1.1,base:.025,scale:.025,track:.045,space:.45,thick:0,line:1.32},
@@ -202,10 +202,9 @@ async function render(){
     const context=canvas.getContext('2d',{alpha:true});
     context.imageSmoothingEnabled=true;
     context.imageSmoothingQuality='high';
-    if(!els.transparent.checked){
-      context.fillStyle=els.bg.value;
-      context.fillRect(0,0,canvas.width,canvas.height);
-    }
+    const backgroundOptions={color:els.bg.value,transparent:els.transparent.checked};
+    if(backgrounds)backgrounds.draw(context,backgroundOptions);
+    else globalThis.JuiceComposition.drawBackground(context,backgroundOptions);
     let y=margin+ascent;
     for(const line of lines){
       x=margin;
@@ -282,6 +281,7 @@ async function start(){
   setStatus('Loading handwriting dataset…');
   try{
     await loadDataset();
+    backgrounds=await globalThis.JuiceBackgrounds.attach({onChange:scheduleRender});
     controlsDisabled(false);
     await render();
   }catch(error){console.error(error);controlsDisabled(false);exportEnabled(false);setStatus(`Start failed: ${error.message}`,'err')}
