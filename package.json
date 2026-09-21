@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "node tests/composer.cjs && node tests/speech.cjs"
+    "test": "node tests/composer.cjs && node tests/speech.cjs && node tests/composition.cjs",
+    "test:backgrounds": "node tests/backgrounds.cjs"
   },
   "devDependencies": {
     "@napi-rs/canvas": "0.1.100"

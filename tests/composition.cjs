@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const {createCanvas}=require('@napi-rs/canvas');
+const scope={};vm.runInNewContext(fs.readFileSync(require('node:path').join(__dirname,'../composition.js'),'utf8'),scope);
+const draw=scope.JuiceComposition.drawBackground,c=createCanvas(100,200),ctx=c.getContext('2d'),image=createCanvas(20,20);
+image.getContext('2d').fillStyle='#ff0000';image.getContext('2d').fillRect(0,0,20,20);
+const pixel=(x,y)=>Array.from(ctx.getImageData(x,y,1,1).data);
+draw(ctx,{image});assert.deepEqual(pixel(0,0),[255,0,0,255]);assert.deepEqual(pixel(99,199),[255,0,0,255]);
+draw(ctx,{image,fit:'contain'});assert.deepEqual(pixel(0,0),[255,255,255,255]);assert.deepEqual(pixel(50,100),[255,0,0,255]);
+draw(ctx,{image,wash:1,color:'#123456'});assert.deepEqual(pixel(50,100),[18,52,86,255]);
+ctx.clearRect(0,0,100,200);draw(ctx,{image,transparent:true});assert.deepEqual(pixel(50,100),[0,0,0,0]);
+assert.equal(ctx.globalAlpha,1);console.log('PASS: shared image layer cover, contain, wash, transparency, context restoration.');

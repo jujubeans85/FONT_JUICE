@@ -7,7 +7,7 @@
   
   <meta name="description" content="Type a message, render it in Adam's real handwriting, and save it as an image.">
   <title>Fonts</title>
-  <link rel="stylesheet" href="working.css?v=20260912-1">
+  <link rel="stylesheet" href="working.css?v=20260921-1">
   <script>
     // Existing birthday/NFC links keep their destination. mask=7 is a composer link.
     const routeParams = new URLSearchParams(location.search);
@@ -22,7 +22,9 @@
   <script defer src="data/adam-hand-v1.b9cc17b0a0b3.js"></script>
   <script defer src="data/adam-hand-capture03.b28f4d48280e.js"></script>
   <script defer src="speech.js?v=20260912-1"></script>
-  <script defer src="working.js?v=20260912-1"></script>
+  <script defer src="composition.js?v=20260921-1"></script>
+  <script defer src="backgrounds.js?v=20260921-1"></script>
+  <script defer src="working.js?v=20260921-1"></script>
 
 <!-- JUICE app identity: keep icon, page accent and share image aligned. -->
 <meta name="theme-color" content="#B8E348">
@@ -62,6 +64,20 @@ A LITTLE WONKY. ALL ME.</textarea>
         <label>Ink<input id="color" type="color" value="#fd9613"></label>
         <label>Background<input id="bg" type="color" value="#ffffff"></label>
       </div>
+    </details>
+    <details class="controls-panel" open>
+      <summary>Backgrounds · your six</summary>
+      <div class="controls-grid">
+        <label>Choose background<select id="backgroundSlot"><option value="-1">Plain colour</option><option value="0">1 · Empty — add an image</option><option value="1">2 · Empty — add an image</option><option value="2">3 · Empty — add an image</option><option value="3">4 · Empty — add an image</option><option value="4">5 · Empty — add an image</option><option value="5">6 · Empty — add an image</option></select></label>
+        <label>Image fit<select id="backgroundFit"><option value="cover">Fill · crop edges</option><option value="contain">Fit · show whole image</option></select></label>
+        <label>Soften with background colour<input id="backgroundWash" type="range" min="0" max="100" value="0"></label>
+      </div>
+      <div class="background-actions">
+        <button id="backgroundPrev" type="button" aria-label="Previous saved background">← Previous</button><button id="backgroundNext" type="button" aria-label="Next saved background">Next →</button>
+        <button id="backgroundAdd" type="button">Add / replace image</button><button id="backgroundRemove" type="button">Clear this slot</button>
+      </div>
+      <input id="backgroundFile" type="file" accept="image/*" hidden>
+      <p id="backgroundStatus" class="field-help background-help" role="status">Images stay in this browser on this device. Keep your originals. Clear background below hides the image for transparent exports.</p>
     </details>
     <div class="button-grid"><button id="renderBtn" class="primary-button" type="button">Render now</button><button id="shuffleBtn" type="button">Shuffle handwriting</button></div>
     <a class="template-link" href="templates/FONT_JUICE_Handwriting_Template.pdf" target="_blank" rel="noopener"><span aria-hidden="true">✎</span><span><strong>Handwriting template</strong><small>A4 · four samples per character · print or write on iPad</small></span><span aria-hidden="true">↗</span></a>

@@ -27,6 +27,7 @@ const datasetName=fs.readdirSync(path.join(root,'data')).find(n=>/^adam-hand-v1\
 vm.runInContext(fs.readFileSync(path.join(root,'data',datasetName),'utf8'),sandbox);
 const captureName=fs.readdirSync(path.join(root,'data')).find(n=>/^adam-hand-capture03\..*\.js$/.test(n));
 vm.runInContext(fs.readFileSync(path.join(root,'data',captureName),'utf8'),sandbox);
+vm.runInContext(fs.readFileSync(path.join(root,'composition.js'),'utf8'),sandbox);
 const source=fs.readFileSync(path.join(root,'working.js'),'utf8').replace('start();\n})();','globalThis.testApi={prepareGlyphMask,getGlyphs,render,loadDataset,normaliseText,scheduleRender,currentPng,layoutItems,restoreState};\n})();');
 vm.runInContext(source,sandbox);
 const api=sandbox.testApi;
